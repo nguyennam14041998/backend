@@ -1,0 +1,153 @@
+NAME_MAX_LENGTH = 1000
+TEXT_MAX_LENGTH = 4000
+CODE_MAX_LENGTH = 50
+NOTE_MAX_LENGTH = 4000
+EMAIL_MAX_LENGTH = 500
+entity Danhmucnghenghiep{
+        Ma String,
+        Ten String,
+        Mota String,
+        BYT String,
+        Sudung Integer
+}
+entity Danhmucnhompttt{
+	Loai Integer,
+	Ma String,
+	Ten String
+}
+entity Danhmucpttt{
+	Loai Integer,
+    Ma String,
+    Ten String,
+    Mota String,
+    MaByt String
+}
+entity Dmnhomxetnghiem{
+	Ma String,
+    Ten String,
+    Loai Integer,
+    Mabh String
+}
+entity Dmxetnghiem{
+	Ma String,
+    Ten String,
+    Cha Integer,
+    Mota String,
+    Gioitinh Integer,
+    Canduoi String,
+    Cantren String,
+    Donvido String,
+    MaByt String,
+    ManhomBH String
+}
+entity DmnhomCDHA{
+	Ma String,
+    Ten String,
+    Loai Integer,
+    MaBH String
+}
+entity DmCDHA{
+	Ma String,
+    Ten String,
+    Mota String,
+    Gioitinh Integer,
+    MaBYT String,
+    ManhomBH String
+}
+entity DmnhomTDCN{
+	Ma String,
+    Ten String,
+    Loai Integer,
+    MaBH String
+}
+entity DmTDCN{
+	Ma String,
+    Ten String,
+    Mota String,
+    Gioitinh Integer,
+    MaBYT String,
+    ManhomBH String
+}
+entity Dmnhomgiaiphaubenh{
+	Ma String,
+    Ten String,
+    Loai Integer,
+    MaBH String
+}
+entity Dmgiaiphaubenh{
+	Ma String,
+    Ten String,
+    Mota String,
+    Gioitinh Integer,
+    MaBYT String,
+    ManhomBH String
+}
+entity Dmloaibenhly{
+	Ma String,
+    Ten String,
+    Mota String,
+    Chuong String
+}
+entity Dmnhombenhly{
+	Ma String,
+    Ten String,
+    Mota String
+}
+entity Dmbenhly{
+	ICD String,
+    TenICD10 String,
+    Tentienganh String,
+    Tenthuonggoi String,
+    ICDcha String,
+    NgayAD LocalDate,
+    Trangthai Integer
+}
+entity Tinh{
+	Ten String
+}
+entity Huyen{
+	Ten String
+}
+entity Xa{
+	Ten String
+}
+entity Cosokhambenh{
+	Ma String,
+    Ten String,
+    MaKCBBD String,
+    Hang String,
+    Tuyen String,
+    Loai String,
+    Diachi String,
+    Ghichu String
+}
+entity DanToc {
+	maDanToc String required,
+    tenDanToc String required,
+    moTa String,
+    maBHYT String,
+    maBHXH String
+}
+relationship OneToMany{
+	Danhmucnhompttt to Danhmucpttt,
+    Dmnhomxetnghiem to Dmxetnghiem,
+    DmnhomCDHA to DmCDHA,
+    DmnhomTDCN to DmTDCN,
+    Dmnhomgiaiphaubenh to Dmgiaiphaubenh,
+    Dmloaibenhly to Dmnhombenhly,
+    Dmloaibenhly to Dmbenhly,
+    Dmnhombenhly to Dmbenhly,
+Tinh to Huyen,
+    Huyen to Xa,
+Tinh to Cosokhambenh,
+    Huyen to Cosokhambenh,
+    Xa to Cosokhambenh
+}
+dto all with mapstruct
+filter all
+paginate all with pagination
+service all with serviceImpl
+
+
+
+

@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.api.backend",
+      "nativeLanguage": "vi"
+    },
+    "jhipsterVersion": "6.5.1",
+    "applicationType": "monolith",
+    "baseName": "backend",
+    "packageName": "com.api.backend",
+    "packageFolder": "com/api/backend",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NzVmNjYwMjg0ZTk5OWIyNDkzZDgxNDJkMDVhOTk5MDdiOGFhZjE4YjY4ZGU4MzkyOGZlOTNiZjY2M2ZiNTVkZmQzNDdkYmMyODQyYjExNzA5ZWQ1OTU1NjJhZDEwNWFiNzllNDkwMzQ0OTg1ZTA3YTRiOGZkNWI0YTg5MThiMDA=",
+    "embeddableLaunchScript": false,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "clientPackageManager": "npm",
+    "nativeLanguage": "vi",
+    "languages": [
+      "vi",
+      "en",
+      "ja"
+    ],
+    "blueprints": [],
+    "skipClient": true
+  }
+}
