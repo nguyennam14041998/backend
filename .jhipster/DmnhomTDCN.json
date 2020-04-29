@@ -1,0 +1,39 @@
+{
+    "name": "DmnhomTDCN",
+    "fields": [
+        {
+            "fieldName": "ma",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ten",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "loai",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "maBH",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "dmTDCN",
+            "otherEntityRelationshipName": "dmnhomTDCN",
+            "relationshipName": "dmTDCN"
+        }
+    ],
+    "changelogDate": "20200428040851",
+    "entityTableName": "dmnhom_tdcn",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

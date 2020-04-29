@@ -1,0 +1,34 @@
+{
+    "name": "Xa",
+    "fields": [
+        {
+            "fieldName": "ten",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "cosokhambenh",
+            "otherEntityRelationshipName": "xa",
+            "relationshipName": "cosokhambenh"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "huyen",
+            "otherEntityRelationshipName": "xa",
+            "relationshipName": "huyen",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200428040900",
+    "entityTableName": "xa",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

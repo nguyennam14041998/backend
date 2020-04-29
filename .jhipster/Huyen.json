@@ -1,0 +1,40 @@
+{
+    "name": "Huyen",
+    "fields": [
+        {
+            "fieldName": "ten",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "xa",
+            "otherEntityRelationshipName": "huyen",
+            "relationshipName": "xa"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "cosokhambenh",
+            "otherEntityRelationshipName": "huyen",
+            "relationshipName": "cosokhambenh"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "tinh",
+            "otherEntityRelationshipName": "huyen",
+            "relationshipName": "tinh",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200428040859",
+    "entityTableName": "huyen",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -42,6 +42,38 @@ public class CacheConfiguration {
             createCache(cm, com.api.backend.domain.User.class.getName());
             createCache(cm, com.api.backend.domain.Authority.class.getName());
             createCache(cm, com.api.backend.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.api.backend.domain.Danhmucnghenghiep.class.getName());
+            createCache(cm, com.api.backend.domain.Danhmucnhompttt.class.getName());
+            createCache(cm, com.api.backend.domain.Danhmucnhompttt.class.getName() + ".danhmucpttts");
+            createCache(cm, com.api.backend.domain.Danhmucpttt.class.getName());
+            createCache(cm, com.api.backend.domain.Dmnhomxetnghiem.class.getName());
+            createCache(cm, com.api.backend.domain.Dmnhomxetnghiem.class.getName() + ".dmxetnghiems");
+            createCache(cm, com.api.backend.domain.Dmxetnghiem.class.getName());
+            createCache(cm, com.api.backend.domain.DmnhomCDHA.class.getName());
+            createCache(cm, com.api.backend.domain.DmnhomCDHA.class.getName() + ".dmCDHAS");
+            createCache(cm, com.api.backend.domain.DmCDHA.class.getName());
+            createCache(cm, com.api.backend.domain.DmnhomTDCN.class.getName());
+            createCache(cm, com.api.backend.domain.DmnhomTDCN.class.getName() + ".dmTDCNS");
+            createCache(cm, com.api.backend.domain.DmTDCN.class.getName());
+            createCache(cm, com.api.backend.domain.Dmnhomgiaiphaubenh.class.getName());
+            createCache(cm, com.api.backend.domain.Dmnhomgiaiphaubenh.class.getName() + ".dmgiaiphaubenhs");
+            createCache(cm, com.api.backend.domain.Dmgiaiphaubenh.class.getName());
+            createCache(cm, com.api.backend.domain.Dmloaibenhly.class.getName());
+            createCache(cm, com.api.backend.domain.Dmloaibenhly.class.getName() + ".dmnhombenhlies");
+            createCache(cm, com.api.backend.domain.Dmloaibenhly.class.getName() + ".dmbenhlies");
+            createCache(cm, com.api.backend.domain.Dmnhombenhly.class.getName());
+            createCache(cm, com.api.backend.domain.Dmnhombenhly.class.getName() + ".dmbenhlies");
+            createCache(cm, com.api.backend.domain.Dmbenhly.class.getName());
+            createCache(cm, com.api.backend.domain.Tinh.class.getName());
+            createCache(cm, com.api.backend.domain.Tinh.class.getName() + ".huyens");
+            createCache(cm, com.api.backend.domain.Tinh.class.getName() + ".cosokhambenhs");
+            createCache(cm, com.api.backend.domain.Huyen.class.getName());
+            createCache(cm, com.api.backend.domain.Huyen.class.getName() + ".xas");
+            createCache(cm, com.api.backend.domain.Huyen.class.getName() + ".cosokhambenhs");
+            createCache(cm, com.api.backend.domain.Xa.class.getName());
+            createCache(cm, com.api.backend.domain.Xa.class.getName() + ".cosokhambenhs");
+            createCache(cm, com.api.backend.domain.Cosokhambenh.class.getName());
+            createCache(cm, com.api.backend.domain.DanToc.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

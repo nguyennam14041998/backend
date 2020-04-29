@@ -14,6 +14,35 @@
     <property name="uuidType" value="varchar(36)" dbms="h2, mysql, mariadb"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040844_added_entity_Danhmucnghenghiep.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040845_added_entity_Danhmucnhompttt.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040846_added_entity_Danhmucpttt.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040847_added_entity_Dmnhomxetnghiem.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040848_added_entity_Dmxetnghiem.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040849_added_entity_DmnhomCDHA.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040850_added_entity_DmCDHA.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040851_added_entity_DmnhomTDCN.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040852_added_entity_DmTDCN.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040853_added_entity_Dmnhomgiaiphaubenh.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040854_added_entity_Dmgiaiphaubenh.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040855_added_entity_Dmloaibenhly.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040856_added_entity_Dmnhombenhly.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040857_added_entity_Dmbenhly.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040858_added_entity_Tinh.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040859_added_entity_Huyen.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040900_added_entity_Xa.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040901_added_entity_Cosokhambenh.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040902_added_entity_DanToc.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20200428040846_added_entity_constraints_Danhmucpttt.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040848_added_entity_constraints_Dmxetnghiem.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040850_added_entity_constraints_DmCDHA.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040852_added_entity_constraints_DmTDCN.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040854_added_entity_constraints_Dmgiaiphaubenh.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040856_added_entity_constraints_Dmnhombenhly.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040857_added_entity_constraints_Dmbenhly.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040859_added_entity_constraints_Huyen.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040900_added_entity_constraints_Xa.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200428040901_added_entity_constraints_Cosokhambenh.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

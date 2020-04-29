@@ -1,0 +1,42 @@
+{
+    "name": "Dmnhombenhly",
+    "fields": [
+        {
+            "fieldName": "ma",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ten",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mota",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "dmbenhly",
+            "otherEntityRelationshipName": "dmnhombenhly",
+            "relationshipName": "dmbenhly"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "dmloaibenhly",
+            "otherEntityRelationshipName": "dmnhombenhly",
+            "relationshipName": "dmloaibenhly",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200428040856",
+    "entityTableName": "dmnhombenhly",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

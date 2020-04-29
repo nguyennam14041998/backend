@@ -1,0 +1,59 @@
+{
+    "name": "Dmbenhly",
+    "fields": [
+        {
+            "fieldName": "iCD",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tenICD10",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tentienganh",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tenthuonggoi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "iCDcha",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ngayAD",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "trangthai",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "dmloaibenhly",
+            "otherEntityRelationshipName": "dmbenhly",
+            "relationshipName": "dmloaibenhly",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "dmnhombenhly",
+            "otherEntityRelationshipName": "dmbenhly",
+            "relationshipName": "dmnhombenhly",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200428040857",
+    "entityTableName": "dmbenhly",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

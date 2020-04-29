@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Cosokhambenh.
+    -->
+    <changeSet id="20200428040901-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="tinh_id"
+                                 baseTableName="cosokhambenh"
+                                 constraintName="fk_cosokhambenh_tinh_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tinh"/>
+
+        <addForeignKeyConstraint baseColumnNames="huyen_id"
+                                 baseTableName="cosokhambenh"
+                                 constraintName="fk_cosokhambenh_huyen_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="huyen"/>
+
+        <addForeignKeyConstraint baseColumnNames="xa_id"
+                                 baseTableName="cosokhambenh"
+                                 constraintName="fk_cosokhambenh_xa_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="xa"/>
+
+    </changeSet>
+</databaseChangeLog>

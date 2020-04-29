@@ -1,0 +1,39 @@
+{
+    "name": "DmnhomCDHA",
+    "fields": [
+        {
+            "fieldName": "ma",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ten",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "loai",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "maBH",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "dmCDHA",
+            "otherEntityRelationshipName": "dmnhomCDHA",
+            "relationshipName": "dmCDHA"
+        }
+    ],
+    "changelogDate": "20200428040849",
+    "entityTableName": "dmnhom_cdha",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
