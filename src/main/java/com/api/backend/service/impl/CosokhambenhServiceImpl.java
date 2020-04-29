@@ -1,13 +1,12 @@
 package com.api.backend.service.impl;
 
-import com.api.backend.service.CosokhambenhService;
 import com.api.backend.domain.Cosokhambenh;
 import com.api.backend.repository.CosokhambenhRepository;
+import com.api.backend.service.CosokhambenhService;
 import com.api.backend.service.dto.CosokhambenhDTO;
-import com.api.backend.service.mapper.CosokhambenhMapper;
+import com.api.backend.service.mapper.MyCoSoKhamBenhMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -26,9 +25,9 @@ public class CosokhambenhServiceImpl implements CosokhambenhService {
 
     private final CosokhambenhRepository cosokhambenhRepository;
 
-    private final CosokhambenhMapper cosokhambenhMapper;
+    private final MyCoSoKhamBenhMapper cosokhambenhMapper;
 
-    public CosokhambenhServiceImpl(CosokhambenhRepository cosokhambenhRepository, CosokhambenhMapper cosokhambenhMapper) {
+    public CosokhambenhServiceImpl(CosokhambenhRepository cosokhambenhRepository, MyCoSoKhamBenhMapper cosokhambenhMapper) {
         this.cosokhambenhRepository = cosokhambenhRepository;
         this.cosokhambenhMapper = cosokhambenhMapper;
     }

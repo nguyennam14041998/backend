@@ -24,7 +24,7 @@ public class MydmptttMapper {
         return list;
     }
 
-    
+
     public List<DanhmucptttDTO> toDto(List<Danhmucpttt> entityList) {
         if ( entityList == null ) {
             return null;
@@ -38,7 +38,7 @@ public class MydmptttMapper {
         return list;
     }
 
-    
+
     public DanhmucptttDTO toDto(Danhmucpttt danhmucpttt) {
         if ( danhmucpttt == null ) {
             return null;
@@ -46,7 +46,6 @@ public class MydmptttMapper {
 
         DanhmucptttDTO danhmucptttDTO = new DanhmucptttDTO();
 
-        danhmucptttDTO.setDanhmucnhomptttId( danhmucptttDanhmucnhomptttId( danhmucpttt ) );
         danhmucptttDTO.setId( danhmucpttt.getId() );
         danhmucptttDTO.setLoai( danhmucpttt.getLoai() );
         danhmucptttDTO.setMa( danhmucpttt.getMa() );
@@ -54,12 +53,13 @@ public class MydmptttMapper {
         danhmucptttDTO.setMota( danhmucpttt.getMota() );
         danhmucptttDTO.setMaByt( danhmucpttt.getMaByt() );
         if(danhmucpttt.getDanhmucnhompttt() != null) {
-        danhmucptttDTO.setTennhom(danhmucpttt.getDanhmucnhompttt().getTen());
+            danhmucptttDTO.setDanhmucnhomptttId(danhmucpttt.getDanhmucnhompttt().getId());
+            danhmucptttDTO.setTennhom(danhmucpttt.getDanhmucnhompttt().getTen());
         }
         return danhmucptttDTO;
     }
 
- 
+
     public Danhmucpttt toEntity(DanhmucptttDTO danhmucptttDTO) {
         if ( danhmucptttDTO == null ) {
             return null;
@@ -67,7 +67,9 @@ public class MydmptttMapper {
 
         Danhmucpttt danhmucpttt = new Danhmucpttt();
 
-        danhmucpttt.setDanhmucnhompttt(dmRepository.findById(danhmucptttDTO.getId()).get() );
+        if(danhmucptttDTO.getDanhmucnhomptttId() != null) {
+            danhmucpttt.setDanhmucnhompttt(dmRepository.findById(danhmucptttDTO.getDanhmucnhomptttId()).get());
+        }
         danhmucpttt.setId( danhmucptttDTO.getId() );
         danhmucpttt.setLoai( danhmucptttDTO.getLoai() );
         danhmucpttt.setMa( danhmucptttDTO.getMa() );
@@ -76,20 +78,5 @@ public class MydmptttMapper {
         danhmucpttt.setMaByt( danhmucptttDTO.getMaByt() );
 
         return danhmucpttt;
-    }
-
-    private Long danhmucptttDanhmucnhomptttId(Danhmucpttt danhmucpttt) {
-        if ( danhmucpttt == null ) {
-            return null;
-        }
-        Danhmucnhompttt danhmucnhompttt = danhmucpttt.getDanhmucnhompttt();
-        if ( danhmucnhompttt == null ) {
-            return null;
-        }
-        Long id = danhmucnhompttt.getId();
-        if ( id == null ) {
-            return null;
-        }
-        return id;
     }
 }

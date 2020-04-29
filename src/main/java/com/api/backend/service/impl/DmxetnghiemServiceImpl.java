@@ -1,13 +1,12 @@
 package com.api.backend.service.impl;
 
-import com.api.backend.service.DmxetnghiemService;
 import com.api.backend.domain.Dmxetnghiem;
 import com.api.backend.repository.DmxetnghiemRepository;
+import com.api.backend.service.DmxetnghiemService;
 import com.api.backend.service.dto.DmxetnghiemDTO;
-import com.api.backend.service.mapper.DmxetnghiemMapper;
+import com.api.backend.service.mapper.MyDanhMucXetNghiemMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -26,9 +25,9 @@ public class DmxetnghiemServiceImpl implements DmxetnghiemService {
 
     private final DmxetnghiemRepository dmxetnghiemRepository;
 
-    private final DmxetnghiemMapper dmxetnghiemMapper;
+    private final MyDanhMucXetNghiemMapper dmxetnghiemMapper;
 
-    public DmxetnghiemServiceImpl(DmxetnghiemRepository dmxetnghiemRepository, DmxetnghiemMapper dmxetnghiemMapper) {
+    public DmxetnghiemServiceImpl(DmxetnghiemRepository dmxetnghiemRepository, MyDanhMucXetNghiemMapper dmxetnghiemMapper) {
         this.dmxetnghiemRepository = dmxetnghiemRepository;
         this.dmxetnghiemMapper = dmxetnghiemMapper;
     }

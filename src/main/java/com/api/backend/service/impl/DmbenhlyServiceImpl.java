@@ -1,13 +1,12 @@
 package com.api.backend.service.impl;
 
-import com.api.backend.service.DmbenhlyService;
 import com.api.backend.domain.Dmbenhly;
 import com.api.backend.repository.DmbenhlyRepository;
+import com.api.backend.service.DmbenhlyService;
 import com.api.backend.service.dto.DmbenhlyDTO;
-import com.api.backend.service.mapper.DmbenhlyMapper;
+import com.api.backend.service.mapper.MyDanhMucBenhLyMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -26,9 +25,9 @@ public class DmbenhlyServiceImpl implements DmbenhlyService {
 
     private final DmbenhlyRepository dmbenhlyRepository;
 
-    private final DmbenhlyMapper dmbenhlyMapper;
+    private final MyDanhMucBenhLyMapper dmbenhlyMapper;
 
-    public DmbenhlyServiceImpl(DmbenhlyRepository dmbenhlyRepository, DmbenhlyMapper dmbenhlyMapper) {
+    public DmbenhlyServiceImpl(DmbenhlyRepository dmbenhlyRepository, MyDanhMucBenhLyMapper dmbenhlyMapper) {
         this.dmbenhlyRepository = dmbenhlyRepository;
         this.dmbenhlyMapper = dmbenhlyMapper;
     }

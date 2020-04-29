@@ -4,13 +4,11 @@ import com.api.backend.BackendApp;
 import com.api.backend.domain.Dmgiaiphaubenh;
 import com.api.backend.domain.Dmnhomgiaiphaubenh;
 import com.api.backend.repository.DmgiaiphaubenhRepository;
+import com.api.backend.service.DmgiaiphaubenhQueryService;
 import com.api.backend.service.DmgiaiphaubenhService;
 import com.api.backend.service.dto.DmgiaiphaubenhDTO;
-import com.api.backend.service.mapper.DmgiaiphaubenhMapper;
+import com.api.backend.service.mapper.MyDanhMucGiaiPhauBenhMapper;
 import com.api.backend.web.rest.errors.ExceptionTranslator;
-import com.api.backend.service.dto.DmgiaiphaubenhCriteria;
-import com.api.backend.service.DmgiaiphaubenhQueryService;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockitoAnnotations;
@@ -62,7 +60,7 @@ public class DmgiaiphaubenhResourceIT {
     private DmgiaiphaubenhRepository dmgiaiphaubenhRepository;
 
     @Autowired
-    private DmgiaiphaubenhMapper dmgiaiphaubenhMapper;
+    private MyDanhMucGiaiPhauBenhMapper dmgiaiphaubenhMapper;
 
     @Autowired
     private DmgiaiphaubenhService dmgiaiphaubenhService;
@@ -202,7 +200,7 @@ public class DmgiaiphaubenhResourceIT {
             .andExpect(jsonPath("$.[*].maBYT").value(hasItem(DEFAULT_MA_BYT)))
             .andExpect(jsonPath("$.[*].manhomBH").value(hasItem(DEFAULT_MANHOM_BH)));
     }
-    
+
     @Test
     @Transactional
     public void getDmgiaiphaubenh() throws Exception {

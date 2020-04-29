@@ -1,16 +1,14 @@
 package com.api.backend.web.rest;
 
 import com.api.backend.BackendApp;
-import com.api.backend.domain.Dmxetnghiem;
 import com.api.backend.domain.Dmnhomxetnghiem;
+import com.api.backend.domain.Dmxetnghiem;
 import com.api.backend.repository.DmxetnghiemRepository;
+import com.api.backend.service.DmxetnghiemQueryService;
 import com.api.backend.service.DmxetnghiemService;
 import com.api.backend.service.dto.DmxetnghiemDTO;
-import com.api.backend.service.mapper.DmxetnghiemMapper;
+import com.api.backend.service.mapper.MyDanhMucXetNghiemMapper;
 import com.api.backend.web.rest.errors.ExceptionTranslator;
-import com.api.backend.service.dto.DmxetnghiemCriteria;
-import com.api.backend.service.DmxetnghiemQueryService;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockitoAnnotations;
@@ -75,7 +73,7 @@ public class DmxetnghiemResourceIT {
     private DmxetnghiemRepository dmxetnghiemRepository;
 
     @Autowired
-    private DmxetnghiemMapper dmxetnghiemMapper;
+    private MyDanhMucXetNghiemMapper dmxetnghiemMapper;
 
     @Autowired
     private DmxetnghiemService dmxetnghiemService;
@@ -231,7 +229,7 @@ public class DmxetnghiemResourceIT {
             .andExpect(jsonPath("$.[*].maByt").value(hasItem(DEFAULT_MA_BYT)))
             .andExpect(jsonPath("$.[*].manhomBH").value(hasItem(DEFAULT_MANHOM_BH)));
     }
-    
+
     @Test
     @Transactional
     public void getDmxetnghiem() throws Exception {

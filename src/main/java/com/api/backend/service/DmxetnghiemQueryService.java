@@ -1,9 +1,13 @@
 package com.api.backend.service;
 
-import java.util.List;
-
-import javax.persistence.criteria.JoinType;
-
+import com.api.backend.domain.Dmnhomxetnghiem_;
+import com.api.backend.domain.Dmxetnghiem;
+import com.api.backend.domain.Dmxetnghiem_;
+import com.api.backend.repository.DmxetnghiemRepository;
+import com.api.backend.service.dto.DmxetnghiemCriteria;
+import com.api.backend.service.dto.DmxetnghiemDTO;
+import com.api.backend.service.mapper.MyDanhMucXetNghiemMapper;
+import io.github.jhipster.service.QueryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -12,14 +16,8 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import io.github.jhipster.service.QueryService;
-
-import com.api.backend.domain.Dmxetnghiem;
-import com.api.backend.domain.*; // for static metamodels
-import com.api.backend.repository.DmxetnghiemRepository;
-import com.api.backend.service.dto.DmxetnghiemCriteria;
-import com.api.backend.service.dto.DmxetnghiemDTO;
-import com.api.backend.service.mapper.DmxetnghiemMapper;
+import javax.persistence.criteria.JoinType;
+import java.util.List;
 
 /**
  * Service for executing complex queries for {@link Dmxetnghiem} entities in the database.
@@ -35,9 +33,9 @@ public class DmxetnghiemQueryService extends QueryService<Dmxetnghiem> {
 
     private final DmxetnghiemRepository dmxetnghiemRepository;
 
-    private final DmxetnghiemMapper dmxetnghiemMapper;
+    private final MyDanhMucXetNghiemMapper dmxetnghiemMapper;
 
-    public DmxetnghiemQueryService(DmxetnghiemRepository dmxetnghiemRepository, DmxetnghiemMapper dmxetnghiemMapper) {
+    public DmxetnghiemQueryService(DmxetnghiemRepository dmxetnghiemRepository, MyDanhMucXetNghiemMapper dmxetnghiemMapper) {
         this.dmxetnghiemRepository = dmxetnghiemRepository;
         this.dmxetnghiemMapper = dmxetnghiemMapper;
     }

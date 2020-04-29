@@ -6,9 +6,8 @@ import com.api.backend.domain.Danhmucnhompttt;
 import com.api.backend.repository.DanhmucptttRepository;
 import com.api.backend.service.DanhmucptttService;
 import com.api.backend.service.dto.DanhmucptttDTO;
-import com.api.backend.service.mapper.DanhmucptttMapper;
+import com.api.backend.service.mapper.MydmptttMapper;
 import com.api.backend.web.rest.errors.ExceptionTranslator;
-import com.api.backend.service.dto.DanhmucptttCriteria;
 import com.api.backend.service.DanhmucptttQueryService;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -59,7 +58,7 @@ public class DanhmucptttResourceIT {
     private DanhmucptttRepository danhmucptttRepository;
 
     @Autowired
-    private DanhmucptttMapper danhmucptttMapper;
+    private MydmptttMapper danhmucptttMapper;
 
     @Autowired
     private DanhmucptttService danhmucptttService;
@@ -195,7 +194,7 @@ public class DanhmucptttResourceIT {
             .andExpect(jsonPath("$.[*].mota").value(hasItem(DEFAULT_MOTA)))
             .andExpect(jsonPath("$.[*].maByt").value(hasItem(DEFAULT_MA_BYT)));
     }
-    
+
     @Test
     @Transactional
     public void getDanhmucpttt() throws Exception {

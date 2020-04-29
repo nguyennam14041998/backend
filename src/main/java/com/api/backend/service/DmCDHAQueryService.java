@@ -1,9 +1,13 @@
 package com.api.backend.service;
 
-import java.util.List;
-
-import javax.persistence.criteria.JoinType;
-
+import com.api.backend.domain.DmCDHA;
+import com.api.backend.domain.DmCDHA_;
+import com.api.backend.domain.DmnhomCDHA_;
+import com.api.backend.repository.DmCDHARepository;
+import com.api.backend.service.dto.DmCDHACriteria;
+import com.api.backend.service.dto.DmCDHADTO;
+import com.api.backend.service.mapper.MyDanhMucCHDAMapper;
+import io.github.jhipster.service.QueryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -12,14 +16,8 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import io.github.jhipster.service.QueryService;
-
-import com.api.backend.domain.DmCDHA;
-import com.api.backend.domain.*; // for static metamodels
-import com.api.backend.repository.DmCDHARepository;
-import com.api.backend.service.dto.DmCDHACriteria;
-import com.api.backend.service.dto.DmCDHADTO;
-import com.api.backend.service.mapper.DmCDHAMapper;
+import javax.persistence.criteria.JoinType;
+import java.util.List;
 
 /**
  * Service for executing complex queries for {@link DmCDHA} entities in the database.
@@ -35,9 +33,9 @@ public class DmCDHAQueryService extends QueryService<DmCDHA> {
 
     private final DmCDHARepository dmCDHARepository;
 
-    private final DmCDHAMapper dmCDHAMapper;
+    private final MyDanhMucCHDAMapper dmCDHAMapper;
 
-    public DmCDHAQueryService(DmCDHARepository dmCDHARepository, DmCDHAMapper dmCDHAMapper) {
+    public DmCDHAQueryService(DmCDHARepository dmCDHARepository, MyDanhMucCHDAMapper dmCDHAMapper) {
         this.dmCDHARepository = dmCDHARepository;
         this.dmCDHAMapper = dmCDHAMapper;
     }

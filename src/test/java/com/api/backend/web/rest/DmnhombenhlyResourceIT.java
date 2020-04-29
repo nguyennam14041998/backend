@@ -8,6 +8,7 @@ import com.api.backend.repository.DmnhombenhlyRepository;
 import com.api.backend.service.DmnhombenhlyService;
 import com.api.backend.service.dto.DmnhombenhlyDTO;
 import com.api.backend.service.mapper.DmnhombenhlyMapper;
+import com.api.backend.service.mapper.MyDanhMucNhomBenhLyMapper;
 import com.api.backend.web.rest.errors.ExceptionTranslator;
 import com.api.backend.service.dto.DmnhombenhlyCriteria;
 import com.api.backend.service.DmnhombenhlyQueryService;
@@ -53,7 +54,7 @@ public class DmnhombenhlyResourceIT {
     private DmnhombenhlyRepository dmnhombenhlyRepository;
 
     @Autowired
-    private DmnhombenhlyMapper dmnhombenhlyMapper;
+    private MyDanhMucNhomBenhLyMapper dmnhombenhlyMapper;
 
     @Autowired
     private DmnhombenhlyService dmnhombenhlyService;
@@ -181,7 +182,7 @@ public class DmnhombenhlyResourceIT {
             .andExpect(jsonPath("$.[*].ten").value(hasItem(DEFAULT_TEN)))
             .andExpect(jsonPath("$.[*].mota").value(hasItem(DEFAULT_MOTA)));
     }
-    
+
     @Test
     @Transactional
     public void getDmnhombenhly() throws Exception {

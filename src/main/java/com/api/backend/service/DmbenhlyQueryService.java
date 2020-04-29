@@ -1,9 +1,14 @@
 package com.api.backend.service;
 
-import java.util.List;
-
-import javax.persistence.criteria.JoinType;
-
+import com.api.backend.domain.Dmbenhly;
+import com.api.backend.domain.Dmbenhly_;
+import com.api.backend.domain.Dmloaibenhly_;
+import com.api.backend.domain.Dmnhombenhly_;
+import com.api.backend.repository.DmbenhlyRepository;
+import com.api.backend.service.dto.DmbenhlyCriteria;
+import com.api.backend.service.dto.DmbenhlyDTO;
+import com.api.backend.service.mapper.MyDanhMucBenhLyMapper;
+import io.github.jhipster.service.QueryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -12,14 +17,8 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import io.github.jhipster.service.QueryService;
-
-import com.api.backend.domain.Dmbenhly;
-import com.api.backend.domain.*; // for static metamodels
-import com.api.backend.repository.DmbenhlyRepository;
-import com.api.backend.service.dto.DmbenhlyCriteria;
-import com.api.backend.service.dto.DmbenhlyDTO;
-import com.api.backend.service.mapper.DmbenhlyMapper;
+import javax.persistence.criteria.JoinType;
+import java.util.List;
 
 /**
  * Service for executing complex queries for {@link Dmbenhly} entities in the database.
@@ -35,9 +34,9 @@ public class DmbenhlyQueryService extends QueryService<Dmbenhly> {
 
     private final DmbenhlyRepository dmbenhlyRepository;
 
-    private final DmbenhlyMapper dmbenhlyMapper;
+    private final MyDanhMucBenhLyMapper dmbenhlyMapper;
 
-    public DmbenhlyQueryService(DmbenhlyRepository dmbenhlyRepository, DmbenhlyMapper dmbenhlyMapper) {
+    public DmbenhlyQueryService(DmbenhlyRepository dmbenhlyRepository, MyDanhMucBenhLyMapper dmbenhlyMapper) {
         this.dmbenhlyRepository = dmbenhlyRepository;
         this.dmbenhlyMapper = dmbenhlyMapper;
     }

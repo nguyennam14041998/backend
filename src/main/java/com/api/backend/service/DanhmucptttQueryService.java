@@ -19,7 +19,6 @@ import com.api.backend.domain.*; // for static metamodels
 import com.api.backend.repository.DanhmucptttRepository;
 import com.api.backend.service.dto.DanhmucptttCriteria;
 import com.api.backend.service.dto.DanhmucptttDTO;
-import com.api.backend.service.mapper.DanhmucptttMapper;
 import com.api.backend.service.mapper.MydmptttMapper;
 
 /**

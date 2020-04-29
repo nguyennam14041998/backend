@@ -4,13 +4,11 @@ import com.api.backend.BackendApp;
 import com.api.backend.domain.DmTDCN;
 import com.api.backend.domain.DmnhomTDCN;
 import com.api.backend.repository.DmTDCNRepository;
+import com.api.backend.service.DmTDCNQueryService;
 import com.api.backend.service.DmTDCNService;
 import com.api.backend.service.dto.DmTDCNDTO;
-import com.api.backend.service.mapper.DmTDCNMapper;
+import com.api.backend.service.mapper.MyDanhMucTDCNMapper;
 import com.api.backend.web.rest.errors.ExceptionTranslator;
-import com.api.backend.service.dto.DmTDCNCriteria;
-import com.api.backend.service.DmTDCNQueryService;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockitoAnnotations;
@@ -62,7 +60,7 @@ public class DmTDCNResourceIT {
     private DmTDCNRepository dmTDCNRepository;
 
     @Autowired
-    private DmTDCNMapper dmTDCNMapper;
+    private MyDanhMucTDCNMapper dmTDCNMapper;
 
     @Autowired
     private DmTDCNService dmTDCNService;
@@ -202,7 +200,7 @@ public class DmTDCNResourceIT {
             .andExpect(jsonPath("$.[*].maBYT").value(hasItem(DEFAULT_MA_BYT)))
             .andExpect(jsonPath("$.[*].manhomBH").value(hasItem(DEFAULT_MANHOM_BH)));
     }
-    
+
     @Test
     @Transactional
     public void getDmTDCN() throws Exception {

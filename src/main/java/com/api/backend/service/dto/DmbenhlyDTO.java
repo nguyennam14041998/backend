@@ -28,6 +28,24 @@ public class DmbenhlyDTO implements Serializable {
     private Long dmloaibenhlyId;
 
     private Long dmnhombenhlyId;
+    private String tenLoaiBenhLy;
+    private String tenNhomBenhLy;
+
+    public String getTenLoaiBenhLy() {
+        return tenLoaiBenhLy;
+    }
+
+    public void setTenLoaiBenhLy(String tenLoaiBenhLy) {
+        this.tenLoaiBenhLy = tenLoaiBenhLy;
+    }
+
+    public String getTenNhomBenhLy() {
+        return tenNhomBenhLy;
+    }
+
+    public void setTenNhomBenhLy(String tenNhomBenhLy) {
+        this.tenNhomBenhLy = tenNhomBenhLy;
+    }
 
     public Long getId() {
         return id;

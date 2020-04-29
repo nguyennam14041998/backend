@@ -9,6 +9,7 @@ import com.api.backend.repository.CosokhambenhRepository;
 import com.api.backend.service.CosokhambenhService;
 import com.api.backend.service.dto.CosokhambenhDTO;
 import com.api.backend.service.mapper.CosokhambenhMapper;
+import com.api.backend.service.mapper.MyCoSoKhamBenhMapper;
 import com.api.backend.web.rest.errors.ExceptionTranslator;
 import com.api.backend.service.dto.CosokhambenhCriteria;
 import com.api.backend.service.CosokhambenhQueryService;
@@ -69,7 +70,7 @@ public class CosokhambenhResourceIT {
     private CosokhambenhRepository cosokhambenhRepository;
 
     @Autowired
-    private CosokhambenhMapper cosokhambenhMapper;
+    private MyCoSoKhamBenhMapper cosokhambenhMapper;
 
     @Autowired
     private CosokhambenhService cosokhambenhService;
@@ -217,7 +218,7 @@ public class CosokhambenhResourceIT {
             .andExpect(jsonPath("$.[*].diachi").value(hasItem(DEFAULT_DIACHI)))
             .andExpect(jsonPath("$.[*].ghichu").value(hasItem(DEFAULT_GHICHU)));
     }
-    
+
     @Test
     @Transactional
     public void getCosokhambenh() throws Exception {

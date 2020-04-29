@@ -4,7 +4,7 @@ import com.api.backend.service.DanhmucptttService;
 import com.api.backend.domain.Danhmucpttt;
 import com.api.backend.repository.DanhmucptttRepository;
 import com.api.backend.service.dto.DanhmucptttDTO;
-import com.api.backend.service.mapper.DanhmucptttMapper;
+import com.api.backend.service.mapper.MydmptttMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,9 +26,9 @@ public class DanhmucptttServiceImpl implements DanhmucptttService {
 
     private final DanhmucptttRepository danhmucptttRepository;
 
-    private final DanhmucptttMapper danhmucptttMapper;
+    private final MydmptttMapper danhmucptttMapper;
 
-    public DanhmucptttServiceImpl(DanhmucptttRepository danhmucptttRepository, DanhmucptttMapper danhmucptttMapper) {
+    public DanhmucptttServiceImpl(DanhmucptttRepository danhmucptttRepository, MydmptttMapper danhmucptttMapper) {
         this.danhmucptttRepository = danhmucptttRepository;
         this.danhmucptttMapper = danhmucptttMapper;
     }

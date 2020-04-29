@@ -32,6 +32,34 @@ public class CosokhambenhDTO implements Serializable {
 
     private Long xaId;
 
+    private String tenHuyen;
+    private String tenTinh;
+    private String tenXa;
+
+    public String getTenHuyen() {
+        return tenHuyen;
+    }
+
+    public void setTenHuyen(String tenHuyen) {
+        this.tenHuyen = tenHuyen;
+    }
+
+    public String getTenTinh() {
+        return tenTinh;
+    }
+
+    public void setTenTinh(String tenTinh) {
+        this.tenTinh = tenTinh;
+    }
+
+    public String getTenXa() {
+        return tenXa;
+    }
+
+    public void setTenXa(String tenXa) {
+        this.tenXa = tenXa;
+    }
+
     public Long getId() {
         return id;
     }

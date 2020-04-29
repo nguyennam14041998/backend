@@ -1,9 +1,13 @@
 package com.api.backend.service;
 
-import java.util.List;
-
-import javax.persistence.criteria.JoinType;
-
+import com.api.backend.domain.Dmgiaiphaubenh;
+import com.api.backend.domain.Dmgiaiphaubenh_;
+import com.api.backend.domain.Dmnhomgiaiphaubenh_;
+import com.api.backend.repository.DmgiaiphaubenhRepository;
+import com.api.backend.service.dto.DmgiaiphaubenhCriteria;
+import com.api.backend.service.dto.DmgiaiphaubenhDTO;
+import com.api.backend.service.mapper.MyDanhMucGiaiPhauBenhMapper;
+import io.github.jhipster.service.QueryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -12,14 +16,8 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import io.github.jhipster.service.QueryService;
-
-import com.api.backend.domain.Dmgiaiphaubenh;
-import com.api.backend.domain.*; // for static metamodels
-import com.api.backend.repository.DmgiaiphaubenhRepository;
-import com.api.backend.service.dto.DmgiaiphaubenhCriteria;
-import com.api.backend.service.dto.DmgiaiphaubenhDTO;
-import com.api.backend.service.mapper.DmgiaiphaubenhMapper;
+import javax.persistence.criteria.JoinType;
+import java.util.List;
 
 /**
  * Service for executing complex queries for {@link Dmgiaiphaubenh} entities in the database.
@@ -35,9 +33,9 @@ public class DmgiaiphaubenhQueryService extends QueryService<Dmgiaiphaubenh> {
 
     private final DmgiaiphaubenhRepository dmgiaiphaubenhRepository;
 
-    private final DmgiaiphaubenhMapper dmgiaiphaubenhMapper;
+    private final MyDanhMucGiaiPhauBenhMapper dmgiaiphaubenhMapper;
 
-    public DmgiaiphaubenhQueryService(DmgiaiphaubenhRepository dmgiaiphaubenhRepository, DmgiaiphaubenhMapper dmgiaiphaubenhMapper) {
+    public DmgiaiphaubenhQueryService(DmgiaiphaubenhRepository dmgiaiphaubenhRepository, MyDanhMucGiaiPhauBenhMapper dmgiaiphaubenhMapper) {
         this.dmgiaiphaubenhRepository = dmgiaiphaubenhRepository;
         this.dmgiaiphaubenhMapper = dmgiaiphaubenhMapper;
     }

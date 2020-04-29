@@ -1,13 +1,12 @@
 package com.api.backend.service.impl;
 
-import com.api.backend.service.DmgiaiphaubenhService;
 import com.api.backend.domain.Dmgiaiphaubenh;
 import com.api.backend.repository.DmgiaiphaubenhRepository;
+import com.api.backend.service.DmgiaiphaubenhService;
 import com.api.backend.service.dto.DmgiaiphaubenhDTO;
-import com.api.backend.service.mapper.DmgiaiphaubenhMapper;
+import com.api.backend.service.mapper.MyDanhMucGiaiPhauBenhMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -26,9 +25,9 @@ public class DmgiaiphaubenhServiceImpl implements DmgiaiphaubenhService {
 
     private final DmgiaiphaubenhRepository dmgiaiphaubenhRepository;
 
-    private final DmgiaiphaubenhMapper dmgiaiphaubenhMapper;
+    private final MyDanhMucGiaiPhauBenhMapper dmgiaiphaubenhMapper;
 
-    public DmgiaiphaubenhServiceImpl(DmgiaiphaubenhRepository dmgiaiphaubenhRepository, DmgiaiphaubenhMapper dmgiaiphaubenhMapper) {
+    public DmgiaiphaubenhServiceImpl(DmgiaiphaubenhRepository dmgiaiphaubenhRepository, MyDanhMucGiaiPhauBenhMapper dmgiaiphaubenhMapper) {
         this.dmgiaiphaubenhRepository = dmgiaiphaubenhRepository;
         this.dmgiaiphaubenhMapper = dmgiaiphaubenhMapper;
     }

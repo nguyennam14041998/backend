@@ -1,9 +1,11 @@
 package com.api.backend.service;
 
-import java.util.List;
-
-import javax.persistence.criteria.JoinType;
-
+import com.api.backend.domain.*;
+import com.api.backend.repository.CosokhambenhRepository;
+import com.api.backend.service.dto.CosokhambenhCriteria;
+import com.api.backend.service.dto.CosokhambenhDTO;
+import com.api.backend.service.mapper.MyCoSoKhamBenhMapper;
+import io.github.jhipster.service.QueryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -12,14 +14,8 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import io.github.jhipster.service.QueryService;
-
-import com.api.backend.domain.Cosokhambenh;
-import com.api.backend.domain.*; // for static metamodels
-import com.api.backend.repository.CosokhambenhRepository;
-import com.api.backend.service.dto.CosokhambenhCriteria;
-import com.api.backend.service.dto.CosokhambenhDTO;
-import com.api.backend.service.mapper.CosokhambenhMapper;
+import javax.persistence.criteria.JoinType;
+import java.util.List;
 
 /**
  * Service for executing complex queries for {@link Cosokhambenh} entities in the database.
@@ -35,9 +31,9 @@ public class CosokhambenhQueryService extends QueryService<Cosokhambenh> {
 
     private final CosokhambenhRepository cosokhambenhRepository;
 
-    private final CosokhambenhMapper cosokhambenhMapper;
+    private final MyCoSoKhamBenhMapper cosokhambenhMapper;
 
-    public CosokhambenhQueryService(CosokhambenhRepository cosokhambenhRepository, CosokhambenhMapper cosokhambenhMapper) {
+    public CosokhambenhQueryService(CosokhambenhRepository cosokhambenhRepository, MyCoSoKhamBenhMapper cosokhambenhMapper) {
         this.cosokhambenhRepository = cosokhambenhRepository;
         this.cosokhambenhMapper = cosokhambenhMapper;
     }

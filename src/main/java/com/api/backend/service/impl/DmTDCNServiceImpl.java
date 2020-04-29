@@ -1,13 +1,12 @@
 package com.api.backend.service.impl;
 
-import com.api.backend.service.DmTDCNService;
 import com.api.backend.domain.DmTDCN;
 import com.api.backend.repository.DmTDCNRepository;
+import com.api.backend.service.DmTDCNService;
 import com.api.backend.service.dto.DmTDCNDTO;
-import com.api.backend.service.mapper.DmTDCNMapper;
+import com.api.backend.service.mapper.MyDanhMucTDCNMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -26,9 +25,9 @@ public class DmTDCNServiceImpl implements DmTDCNService {
 
     private final DmTDCNRepository dmTDCNRepository;
 
-    private final DmTDCNMapper dmTDCNMapper;
+    private final MyDanhMucTDCNMapper dmTDCNMapper;
 
-    public DmTDCNServiceImpl(DmTDCNRepository dmTDCNRepository, DmTDCNMapper dmTDCNMapper) {
+    public DmTDCNServiceImpl(DmTDCNRepository dmTDCNRepository, MyDanhMucTDCNMapper dmTDCNMapper) {
         this.dmTDCNRepository = dmTDCNRepository;
         this.dmTDCNMapper = dmTDCNMapper;
     }

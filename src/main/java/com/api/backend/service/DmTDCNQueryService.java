@@ -1,9 +1,13 @@
 package com.api.backend.service;
 
-import java.util.List;
-
-import javax.persistence.criteria.JoinType;
-
+import com.api.backend.domain.DmTDCN;
+import com.api.backend.domain.DmTDCN_;
+import com.api.backend.domain.DmnhomTDCN_;
+import com.api.backend.repository.DmTDCNRepository;
+import com.api.backend.service.dto.DmTDCNCriteria;
+import com.api.backend.service.dto.DmTDCNDTO;
+import com.api.backend.service.mapper.MyDanhMucTDCNMapper;
+import io.github.jhipster.service.QueryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -12,14 +16,8 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import io.github.jhipster.service.QueryService;
-
-import com.api.backend.domain.DmTDCN;
-import com.api.backend.domain.*; // for static metamodels
-import com.api.backend.repository.DmTDCNRepository;
-import com.api.backend.service.dto.DmTDCNCriteria;
-import com.api.backend.service.dto.DmTDCNDTO;
-import com.api.backend.service.mapper.DmTDCNMapper;
+import javax.persistence.criteria.JoinType;
+import java.util.List;
 
 /**
  * Service for executing complex queries for {@link DmTDCN} entities in the database.
@@ -35,9 +33,9 @@ public class DmTDCNQueryService extends QueryService<DmTDCN> {
 
     private final DmTDCNRepository dmTDCNRepository;
 
-    private final DmTDCNMapper dmTDCNMapper;
+    private final MyDanhMucTDCNMapper dmTDCNMapper;
 
-    public DmTDCNQueryService(DmTDCNRepository dmTDCNRepository, DmTDCNMapper dmTDCNMapper) {
+    public DmTDCNQueryService(DmTDCNRepository dmTDCNRepository, MyDanhMucTDCNMapper dmTDCNMapper) {
         this.dmTDCNRepository = dmTDCNRepository;
         this.dmTDCNMapper = dmTDCNMapper;
     }

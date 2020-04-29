@@ -31,6 +31,15 @@ public class DmxetnghiemDTO implements Serializable {
 
 
     private Long dmnhomxetnghiemId;
+    private String tenNhom;
+
+    public String getTenNhom() {
+        return tenNhom;
+    }
+
+    public void setTenNhom(String tenNhom) {
+        this.tenNhom = tenNhom;
+    }
 
     public Long getId() {
         return id;

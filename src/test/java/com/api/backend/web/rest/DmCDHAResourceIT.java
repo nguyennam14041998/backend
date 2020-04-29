@@ -4,13 +4,11 @@ import com.api.backend.BackendApp;
 import com.api.backend.domain.DmCDHA;
 import com.api.backend.domain.DmnhomCDHA;
 import com.api.backend.repository.DmCDHARepository;
+import com.api.backend.service.DmCDHAQueryService;
 import com.api.backend.service.DmCDHAService;
 import com.api.backend.service.dto.DmCDHADTO;
-import com.api.backend.service.mapper.DmCDHAMapper;
+import com.api.backend.service.mapper.MyDanhMucCHDAMapper;
 import com.api.backend.web.rest.errors.ExceptionTranslator;
-import com.api.backend.service.dto.DmCDHACriteria;
-import com.api.backend.service.DmCDHAQueryService;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockitoAnnotations;
@@ -62,7 +60,7 @@ public class DmCDHAResourceIT {
     private DmCDHARepository dmCDHARepository;
 
     @Autowired
-    private DmCDHAMapper dmCDHAMapper;
+    private MyDanhMucCHDAMapper dmCDHAMapper;
 
     @Autowired
     private DmCDHAService dmCDHAService;
@@ -202,7 +200,7 @@ public class DmCDHAResourceIT {
             .andExpect(jsonPath("$.[*].maBYT").value(hasItem(DEFAULT_MA_BYT)))
             .andExpect(jsonPath("$.[*].manhomBH").value(hasItem(DEFAULT_MANHOM_BH)));
     }
-    
+
     @Test
     @Transactional
     public void getDmCDHA() throws Exception {

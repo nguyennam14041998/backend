@@ -1,13 +1,12 @@
 package com.api.backend.service.impl;
 
-import com.api.backend.service.DmCDHAService;
 import com.api.backend.domain.DmCDHA;
 import com.api.backend.repository.DmCDHARepository;
+import com.api.backend.service.DmCDHAService;
 import com.api.backend.service.dto.DmCDHADTO;
-import com.api.backend.service.mapper.DmCDHAMapper;
+import com.api.backend.service.mapper.MyDanhMucCHDAMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -26,9 +25,9 @@ public class DmCDHAServiceImpl implements DmCDHAService {
 
     private final DmCDHARepository dmCDHARepository;
 
-    private final DmCDHAMapper dmCDHAMapper;
+    private final MyDanhMucCHDAMapper dmCDHAMapper;
 
-    public DmCDHAServiceImpl(DmCDHARepository dmCDHARepository, DmCDHAMapper dmCDHAMapper) {
+    public DmCDHAServiceImpl(DmCDHARepository dmCDHARepository, MyDanhMucCHDAMapper dmCDHAMapper) {
         this.dmCDHARepository = dmCDHARepository;
         this.dmCDHAMapper = dmCDHAMapper;
     }

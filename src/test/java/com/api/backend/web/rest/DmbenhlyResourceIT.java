@@ -5,13 +5,11 @@ import com.api.backend.domain.Dmbenhly;
 import com.api.backend.domain.Dmloaibenhly;
 import com.api.backend.domain.Dmnhombenhly;
 import com.api.backend.repository.DmbenhlyRepository;
+import com.api.backend.service.DmbenhlyQueryService;
 import com.api.backend.service.DmbenhlyService;
 import com.api.backend.service.dto.DmbenhlyDTO;
-import com.api.backend.service.mapper.DmbenhlyMapper;
+import com.api.backend.service.mapper.MyDanhMucBenhLyMapper;
 import com.api.backend.web.rest.errors.ExceptionTranslator;
-import com.api.backend.service.dto.DmbenhlyCriteria;
-import com.api.backend.service.DmbenhlyQueryService;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockitoAnnotations;
@@ -69,7 +67,7 @@ public class DmbenhlyResourceIT {
     private DmbenhlyRepository dmbenhlyRepository;
 
     @Autowired
-    private DmbenhlyMapper dmbenhlyMapper;
+    private MyDanhMucBenhLyMapper dmbenhlyMapper;
 
     @Autowired
     private DmbenhlyService dmbenhlyService;
@@ -213,7 +211,7 @@ public class DmbenhlyResourceIT {
             .andExpect(jsonPath("$.[*].ngayAD").value(hasItem(DEFAULT_NGAY_AD.toString())))
             .andExpect(jsonPath("$.[*].trangthai").value(hasItem(DEFAULT_TRANGTHAI)));
     }
-    
+
     @Test
     @Transactional
     public void getDmbenhly() throws Exception {

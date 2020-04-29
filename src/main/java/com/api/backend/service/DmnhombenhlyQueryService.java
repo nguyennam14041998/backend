@@ -1,9 +1,14 @@
 package com.api.backend.service;
 
-import java.util.List;
-
-import javax.persistence.criteria.JoinType;
-
+import com.api.backend.domain.Dmbenhly_;
+import com.api.backend.domain.Dmloaibenhly_;
+import com.api.backend.domain.Dmnhombenhly;
+import com.api.backend.domain.Dmnhombenhly_;
+import com.api.backend.repository.DmnhombenhlyRepository;
+import com.api.backend.service.dto.DmnhombenhlyCriteria;
+import com.api.backend.service.dto.DmnhombenhlyDTO;
+import com.api.backend.service.mapper.MyDanhMucNhomBenhLyMapper;
+import io.github.jhipster.service.QueryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -12,14 +17,8 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import io.github.jhipster.service.QueryService;
-
-import com.api.backend.domain.Dmnhombenhly;
-import com.api.backend.domain.*; // for static metamodels
-import com.api.backend.repository.DmnhombenhlyRepository;
-import com.api.backend.service.dto.DmnhombenhlyCriteria;
-import com.api.backend.service.dto.DmnhombenhlyDTO;
-import com.api.backend.service.mapper.DmnhombenhlyMapper;
+import javax.persistence.criteria.JoinType;
+import java.util.List;
 
 /**
  * Service for executing complex queries for {@link Dmnhombenhly} entities in the database.
@@ -35,9 +34,9 @@ public class DmnhombenhlyQueryService extends QueryService<Dmnhombenhly> {
 
     private final DmnhombenhlyRepository dmnhombenhlyRepository;
 
-    private final DmnhombenhlyMapper dmnhombenhlyMapper;
+    private final MyDanhMucNhomBenhLyMapper dmnhombenhlyMapper;
 
-    public DmnhombenhlyQueryService(DmnhombenhlyRepository dmnhombenhlyRepository, DmnhombenhlyMapper dmnhombenhlyMapper) {
+    public DmnhombenhlyQueryService(DmnhombenhlyRepository dmnhombenhlyRepository, MyDanhMucNhomBenhLyMapper dmnhombenhlyMapper) {
         this.dmnhombenhlyRepository = dmnhombenhlyRepository;
         this.dmnhombenhlyMapper = dmnhombenhlyMapper;
     }

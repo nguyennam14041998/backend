@@ -17,6 +17,15 @@ public class DmnhombenhlyDTO implements Serializable {
 
 
     private Long dmloaibenhlyId;
+    private String tenBenhLy;
+
+    public String getTenBenhLy() {
+        return tenBenhLy;
+    }
+
+    public void setTenBenhLy(String tenBenhLy) {
+        this.tenBenhLy = tenBenhLy;
+    }
 
     public Long getId() {
         return id;
