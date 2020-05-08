@@ -111,6 +111,16 @@ entity Huyen{
 entity Xa{
 	Ten String
 }
+entity Danhmuchanhchinh{
+        Ten String,
+        Tendaydu String,
+		Tenviettat String,
+		Tags String,
+        Diadanhcha Integer,
+        Cap Integer,
+        Thanhthi Integer,
+		Hoatdong Integer
+}
 entity Cosokhambenh{
 	Ma String,
     Ten String,

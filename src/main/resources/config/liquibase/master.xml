@@ -33,6 +33,7 @@
     <include file="config/liquibase/changelog/20200428040900_added_entity_Xa.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200428040901_added_entity_Cosokhambenh.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200428040902_added_entity_DanToc.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200508064016_added_entity_Danhmuchanhchinh.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20200428040846_added_entity_constraints_Danhmucpttt.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200428040848_added_entity_constraints_Dmxetnghiem.xml" relativeToChangelogFile="false"/>

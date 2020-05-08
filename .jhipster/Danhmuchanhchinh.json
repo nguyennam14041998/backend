@@ -1,0 +1,48 @@
+{
+    "name": "Danhmuchanhchinh",
+    "fields": [
+        {
+            "fieldName": "ten",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tendaydu",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tenviettat",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tags",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "diadanhcha",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "cap",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "thanhthi",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hoatdong",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200508064016",
+    "entityTableName": "danhmuchanhchinh",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
